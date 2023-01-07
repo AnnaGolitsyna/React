@@ -1,25 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 
 const rootElement = document.querySelector('#root');
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-const element = React.createElement(
-  'div',
-  { className: 'greeting' },
-  React.createElement('h1', { className: 'greeting__title' }, 'Hello, world!'),
-  React.createElement(
-    'p',
-    { className: 'greeting__text' },
-    "I'm learning React"
-  )
+
+const element = (
+  <div className="greeting">
+    <h1 className="greeting__title">Hello, world!</h1>
+    <p className="greeting__text">I'm learning React</p>
+  </div>
 );
 
 ReactDOM.render(element, rootElement);
-
-
-
-
 
 // root.render(
 //   <React.StrictMode>
