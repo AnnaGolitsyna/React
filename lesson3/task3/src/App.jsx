@@ -3,7 +3,7 @@ import Comment from './Comment';
 
 const userInfo = {
   name: 'Tom',
-  avatarUrl: 'https://avatars1.githubusercontent.com',
+  avatarUrl: 'https://avatars3.githubusercontent.com/u10003',
 };
 
 const App = () => {
