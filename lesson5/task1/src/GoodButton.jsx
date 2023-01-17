@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GoodButton = () => (
-  <button class="fancy-button" onClick={() => alert('Good job!.')}>
+  <button class="fancy-button" onClick={() => alert('Good job!')}>
     Click me!
   </button>
 );
