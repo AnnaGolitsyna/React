@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Greeting(props) {
-  const { firstName, lastName, birthDate } = props.user;
+function Greeting({ firstName, lastName, birthDate }) {
+ 
   const userAge = Math.floor((new Date() - birthDate) / 31622400000);
 
   return (

@@ -9,8 +9,7 @@ const userData = {
 
 
 function App() {
-
-  return <Greeting user={ userData } />;
+  return <Greeting { ...userData } />;
 }
 
 export default App;
