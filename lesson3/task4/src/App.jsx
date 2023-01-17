@@ -7,8 +7,10 @@ const userData = {
   birthDate: new Date('2005-02-01T11:32:19.566Z'),
 };
 
+
 function App() {
-  return <Greeting user={userData} />;
+
+  return <Greeting user={ userData } />;
 }
 
 export default App;

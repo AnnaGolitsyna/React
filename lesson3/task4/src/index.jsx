@@ -6,4 +6,4 @@ import App from './App';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<App />, rootElem);
+ReactDOM.render(<App  />, rootElem);
