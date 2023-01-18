@@ -11,25 +11,25 @@ class Colors extends React.Component {
 
   render() {
     return (
-      <div className="counter">
+      <div className="colors">
         <div
           style={{ backgroundColor: RED }}
           onClick={() => this.setBodyColor(RED)}
-          className="counter__button"
+          className="colors__button"
         ></div>
-        <span className="counter__value"></span>
+        <span className="colors__value"></span>
         <div
           style={{ backgroundColor: GREEN }}
           onClick={() => this.setBodyColor(GREEN)}
-          className="counter__button"
+          className="colors__button"
         ></div>
-        <span className="counter__value"></span>
+        <span className="colors__value"></span>
         <div
           style={{ backgroundColor: BLUE }}
           onClick={() => this.setBodyColor(BLUE)}
-          className="counter__button"
+          className="colors__button"
         ></div>
-        <span className="counter__value"></span>
+        <span className="colors__value"></span>
       </div>
     );
   }
