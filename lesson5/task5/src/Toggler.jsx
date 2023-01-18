@@ -4,20 +4,22 @@ class Toggler extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: 'Off',
+      status: false,
     };
   }
 
   changeStatus = () => {
     this.setState({
-      status: this.state.status === 'Off' ? 'On' : 'Off',
+      status: !this.state.status,
     });
   };
+
+  // click => changeStatus => render
 
   render() {
     return (
       <div className="toggler" onClick={this.changeStatus}>
-        {this.state.status}
+        {this.state.status ? 'On' : 'Off'}
       </div>
     );
   }
