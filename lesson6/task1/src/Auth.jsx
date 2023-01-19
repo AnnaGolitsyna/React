@@ -6,7 +6,7 @@ import Logout from './Logout';
 class Auth extends React.Component {
   constructor(props) {
     super(props);
-   
+
     this.state = {
       isLoggedIn: false,
     };
@@ -14,22 +14,23 @@ class Auth extends React.Component {
 
   handlerLogin = () => {
     this.setState({
-      isLoggedIn: false,
+      isLoggedIn: true,
     });
   };
 
   handlerLogout = () => {
     this.setState({
-      isLoggedIn: true,
+      isLoggedIn: false,
     });
   };
 
   render() {
     let button;
     if (this.state.isLoggedIn) {
-      button = <Login onLogin={this.handlerLogin} />;
+      button = <Logout onLogout={this.handlerLogout} />;
+
     } else {
-      button = <Logout onLogout={this.handlerLogout}/>;
+      button = <Login onLogin={this.handlerLogin} />;
     }
 
     return (
