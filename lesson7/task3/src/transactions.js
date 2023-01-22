@@ -25,11 +25,4 @@ const transactions = [
   },
 ];
 
-const newFormat = new Intl.NumberFormat('en-GB');
-
-const formatAmountTrans = transactions.map(({ amount, ...rest }) => ({
-  ...rest,
-  amount: newFormat.format(amount),
-}));
-
-export default formatAmountTrans;
+export default transactions;
