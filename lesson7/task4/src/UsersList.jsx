@@ -32,10 +32,10 @@ class UsersList extends React.Component {
   };
 
   render() {
-    let start =
+    const start =
       this.state.itemsPerPage * this.state.currentPage -
       this.state.itemsPerPage;
-    let end = this.state.itemsPerPage * this.state.currentPage;
+    const end = this.state.itemsPerPage * this.state.currentPage;
     const userPage = this.props.users.slice(start, end);
 
     return (
