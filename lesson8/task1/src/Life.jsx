@@ -27,7 +27,7 @@ class Life extends React.Component {
   componentDidUpdate(nextProps, prevState) {
     console.log(nextProps, prevState);
     console.log(
-      'componentDidUpdate(nextProps, prevState): some updates based on new props'
+      'componentDidUpdate(prevProps, prevState): some updates based on new props'
     );
     // this.setState({
     //   num: Math.random() + 1,
@@ -36,7 +36,7 @@ class Life extends React.Component {
 
   componentWillUnmount() {
     console.log(
-      'componentWillUnmount(): cleanup befor DOM related to component will be removed'
+      'componentWillUnmount(): cleanup before DOM related to component will be removed'
     );
   }
 
