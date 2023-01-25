@@ -1,15 +1,10 @@
 import React from 'react';
 
 class Dimensions extends React.Component {
-  constructor(props) {
-    super(props);
-    const { innerWidth, innerHeight } = window;
-    document.title = `${innerWidth} x ${innerHeight}`;
-    this.state = {
-      width: innerWidth,
-      height: innerHeight,
-    };
-  }
+  state = {
+    width: null,
+    height: null,
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
