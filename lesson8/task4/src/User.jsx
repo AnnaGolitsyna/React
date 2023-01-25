@@ -10,7 +10,7 @@ class User extends React.Component {
   }
 
   fetchUser = (userId) => {
-    fetch(`http://api.github.com/users/${userId}`)
+    fetch(`https://api.github.com/users/${userId}`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({
