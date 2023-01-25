@@ -1,15 +1,21 @@
 import React from 'react';
 
+const userDefault = {
+  avatar_url: 'https://avatars3.githubusercontent.com/u/69631?v=4',
+  name: 'Facebook',
+  location: 'Menlo Park, California',
+};
+
 class User extends React.Component {
   state = {
-    user: null,
+    user: userDefault,
   };
 
   componentDidMount() {
     this.fetchUser(this.props.userId);
   }
 
-  fetchUser = userId => {
+  fetchUser = (userId) => {
     fetch(`http://api.github.com/users/${userId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -17,12 +23,13 @@ class User extends React.Component {
           user: data,
         });
       });
-  }
+  };
 
   render() {
-    if (!this.state.user) {
-      return null;
-    }
+    // if (!this.state.user) {
+    //   return null;
+    // }
+
     const { name, location, avatar_url } = this.state.user;
     return (
       <div className="user">
