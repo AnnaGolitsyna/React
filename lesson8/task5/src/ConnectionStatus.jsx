@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class ConnectionsStatus extends React.Component {
+class ConnectionStatus extends React.Component {
   state = {
     status: 'Online',
   };
@@ -40,4 +40,4 @@ class ConnectionsStatus extends React.Component {
   }
 }
 
-export default ConnectionsStatus;
+export default ConnectionStatus;
