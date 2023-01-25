@@ -1,14 +1,8 @@
 import React from 'react';
 
-const userDefault = {
-  avatar_url: 'https://avatars3.githubusercontent.com/u/69631?v=4',
-  name: 'Facebook',
-  location: 'Menlo Park, California',
-};
-
 class User extends React.Component {
   state = {
-    user: userDefault,
+    user: null,
   };
 
   componentDidMount() {
@@ -26,11 +20,13 @@ class User extends React.Component {
   };
 
   render() {
-    // if (!this.state.user) {
-    //   return null;
-    // }
+    const { user } = this.state;
 
-    const { name, location, avatar_url } = this.state.user;
+    if (!user) {
+      return null;
+    }
+
+    const { name, location, avatar_url } = user;
     return (
       <div className="user">
         <img alt="User Avatar" src={avatar_url} className="user__avatar" />
