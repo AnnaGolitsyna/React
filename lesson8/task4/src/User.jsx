@@ -6,7 +6,11 @@ class User extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`http://api.github.com/users/${this.props.userId}`)
+    this.fetchUser(this.props.userId);
+  }
+
+  fetchUser = userId => {
+    fetch(`http://api.github.com/users/${userId}`)
       .then((response) => response.json())
       .then((data) => {
         this.setState({
@@ -19,7 +23,6 @@ class User extends React.Component {
     if (!this.state.user) {
       return null;
     }
-
     const { name, location, avatar_url } = this.state.user;
     return (
       <div className="user">
