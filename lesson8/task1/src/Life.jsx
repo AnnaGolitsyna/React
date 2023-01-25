@@ -22,9 +22,9 @@ class Life extends React.Component {
       console.log(
         'componentDidUpdate(prevProps, prevState): some updates based on new props'
       );
-      this.setState({
-        num: Math.random() + 1,
-      });
+      // this.setState({
+      //   num: Math.random() + 1,
+      // });
     }
   }
 
@@ -34,6 +34,7 @@ class Life extends React.Component {
     console.log(
       'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
     );
+    return true;
   }
 
   componentWillUnmount() {
