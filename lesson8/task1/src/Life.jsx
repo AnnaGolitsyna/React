@@ -8,6 +8,7 @@ class Life extends React.Component {
     };
     console.log('constructor: good place to create state');
   }
+
   componentDidMount() {
     console.log('componentDidMount: API calls, subscriptions');
     this.setState({
@@ -15,23 +16,24 @@ class Life extends React.Component {
     });
   }
 
+  componentDidUpdate(nextProps, prevState) {
+    console.log(nextProps, prevState);
+    if (nextProps !== prevState) {
+      console.log(
+        'componentDidUpdate(prevProps, prevState): some updates based on new props'
+      );
+      this.setState({
+        num: Math.random() + 1,
+      });
+    }
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     console.log(nextProps, nextState);
 
-      console.log(
-        'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
-      );
-
-  }
-
-  componentDidUpdate(nextProps, prevState) {
-    console.log(nextProps, prevState);
     console.log(
-      'componentDidUpdate(prevProps, prevState): some updates based on new props'
+      'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
     );
-    // this.setState({
-    //   num: Math.random() + 1,
-    // });
   }
 
   componentWillUnmount() {
