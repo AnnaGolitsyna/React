@@ -21,10 +21,13 @@ class UserForm extends React.Component {
   };
 
   render() {
+    const { name, student, occupation, about } = this.state;
     return (
       <form
         className="login-form"
-        onSubmit={(e) => this.props.onSubmit(e, this.state)}
+        onSubmit={(e) =>
+          this.props.onSubmit(e, { name, student, occupation, about })
+        }
       >
         <h1 className="form-title">Profile</h1>
 
