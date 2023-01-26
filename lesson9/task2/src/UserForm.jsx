@@ -3,11 +3,11 @@ import React from 'react';
 class UserForm extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       name: '',
       student: '',
-      occupation: '',
+      occupation: 'london',
       about: '',
     };
   }
