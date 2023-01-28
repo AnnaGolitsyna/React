@@ -3,7 +3,7 @@ import UserForm from './UserForm';
 
 const App = () => {
 
-  const createUser = (event, userData) => {
+  const createUser = (userData) => {
     event.preventDefault();
     console.log(userData);
   };
