@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductsList from './ProductsList';
-import CarlTitle from './CarlTitle';
+import CartTitle from './CartTitle';
 
 class ShoppingCart extends React.Component {
   // input - userName
@@ -23,7 +23,7 @@ class ShoppingCart extends React.Component {
   render() {
     return (
       <div className="column">
-        <CarlTitle userName={this.props.userName} count={this.state.cartItems.length}/>
+        <CartTitle userName={this.props.userName} count={this.state.cartItems.length}/>
         <ProductsList cartItems={this.state.cartItems}/>
       </div>
     );

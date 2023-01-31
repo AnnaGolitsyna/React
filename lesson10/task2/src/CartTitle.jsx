@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CarlTitle = ({ userName, count }) => {
+const CartTitle = ({ userName, count }) => {
   // input - count, userName
   // output - text 'userName, you added count items'
 
@@ -9,4 +9,4 @@ const CarlTitle = ({ userName, count }) => {
   );
 };
 
-export default CarlTitle;
+export default CartTitle;
