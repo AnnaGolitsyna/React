@@ -27,6 +27,7 @@ class ProductTable extends React.Component {
       rows.push(<ProductRow {...product} key={product.name} />);
       lastCategory = product.category;
     });
+    console.log(rows);
 
     return (
       <table>
