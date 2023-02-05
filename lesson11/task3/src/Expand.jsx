@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 // <FontAwesomeIcon icon={faArrowUp} />
@@ -6,9 +7,9 @@ import React from 'react';
 
 const Expand = ({ title, children, isContent, onClickBtn }) => {
   const contentIcon = isContent ? (
-    <i class="fa-solid fa-arrow-up"></i>
+    <i className="fa-solid fa-arrow-up"></i>
   ) : (
-    <i class="fa-solid fa-arrow-down"></i>
+    <i className="fa-solid fa-arrow-down"></i>
   );
 
   return (
@@ -22,6 +23,18 @@ const Expand = ({ title, children, isContent, onClickBtn }) => {
       {isContent && <div className="expand__content">{children}</div>}
     </div>
   );
+};
+
+Expand.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.element.isRequired,
+  isContent: PropTypes.bool,
+  onClickBtn: PropTypes.func.isRequired,
+};
+
+Expand.defaultProps = {
+  title: 'some text',
+  isContent: false,
 };
 
 export default Expand;

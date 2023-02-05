@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Expand
-          title="Some title"
+          title="Expanded Component"
           isContent={this.state.textContent}
           onClickBtn={this.handlerBtn}
         >
