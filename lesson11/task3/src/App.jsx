@@ -2,23 +2,10 @@ import React from 'react';
 import Expand from './Expand';
 
 class App extends React.Component {
-  state = {
-    textContent: false,
-  };
-  handlerBtn = () => {
-    this.setState({
-      textContent: !this.state.textContent,
-    });
-  };
-
   render() {
     return (
       <div className="app">
-        <Expand
-          title="Expanded Component"
-          isContent={this.state.textContent}
-          onClickBtn={this.handlerBtn}
-        >
+        <Expand title="Expanded Component">
           <p>
             Hooks are a new addition in React 16.8. They let you use state and
             other React features without writing a class.
