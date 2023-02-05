@@ -1,12 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+// <FontAwesomeIcon icon={faArrowUp} />
+// <FontAwesomeIcon icon={faArrowDown} />
 
 const Expand = ({ title, children, isContent, onClickBtn }) => {
   const contentIcon = isContent ? (
-    <FontAwesomeIcon icon={faArrowUp} />
+    <i class="fa-solid fa-arrow-up"></i>
   ) : (
-    <FontAwesomeIcon icon={faArrowDown} />
+    <i class="fa-solid fa-arrow-down"></i>
   );
 
   return (
